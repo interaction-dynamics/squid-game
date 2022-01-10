@@ -18,4 +18,4 @@ React and more specifically the principle of hooks was nice to use. The Lord ico
 
 ## Contact us
 
-Interested to work with use. You can contact us at [thibault.friedrich@gmail.com](mailto:thibault.friedrich@gmail.com).
+Interested to work with us? You can contact us at [thibault.friedrich@gmail.com](mailto:thibault.friedrich@gmail.com).
