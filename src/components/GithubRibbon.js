@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => (
-  <a href="https://interaction-dynamics.io/squid-game/" className="github-corner" aria-label="View source on GitHub">
+  <a href="https://github.com/interaction-dynamics/squid-game" className="github-corner" aria-label="View source on GitHub">
     <svg
       width="80"
       height="80"
