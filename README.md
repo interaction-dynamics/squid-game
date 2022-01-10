@@ -15,3 +15,7 @@ React and more specifically the principle of hooks was nice to use. The Lord ico
 - [Exemple of code with motion detector](https://github.com/lonekorean/diff-cam-scratchpad/blob/master/diff-cam-engine.js)
 - [Switch component with tailwind](https://dev.to/themesberg/building-a-tailwind-css-toggleswitch-component-4pc3)
 - [useInterval hook](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+
+## Contact us
+
+Interested to work with use. You can contact us at [thibault.friedrich@gmail.com](mailto:thibault.friedrich@gmail.com).
