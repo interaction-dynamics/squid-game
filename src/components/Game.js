@@ -13,7 +13,7 @@ const width = 640
 const height = 480
 
 const PIXEL_SCORE_THRESHOLD = 32
-const IMAGE_SCORE_THRESHOLD = 4000
+const IMAGE_SCORE_THRESHOLD = 8000
 const IMAGE_SCORE_THRESHOLD_HARD = 1000
 
 const Status = {
