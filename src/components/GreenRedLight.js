@@ -1,9 +1,11 @@
 import React from 'react'
 import MotionIndicator from './MotionIndicator'
 
-export default ({ motion, motionMax, label }) => (
+import Message from './Message'
+
+export default ({ motionRatio, label, hint }) => (
   <div className="flex flex-col items-center">
-    <MotionIndicator motion={motion} motionMax={motionMax} />
-    <div className="text-2xl p-5">{label}</div>
+    <MotionIndicator motionRatio={motionRatio} />
+    <Message title={label}>{hint}</Message>
   </div>
 )
