@@ -44,6 +44,7 @@ yarn build
 # code validation
 yarn lint
 yarn format
+yarn test
 yarn commitlint
 ```
 
