@@ -1,16 +1,31 @@
 # Squid game
 
-A Web game based on green light/red light game from the famouse Squid Game TV show.
+A Web game based on green light/red light game from the famouse Squid Game TV
+show. You can play it at
+[interaction-dynamics.io/squid-game/](interaction-dynamics.io/squid-game/). This
+this web app create a motion detector using the webcam/front camera.
 
-This web app uses [React v17](https://reactjs.org/), [Tailwind](https://cdn.tailwindcss.com) and the set of icons [Lordicons](https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js). The goal of this web app was to create a motion detector using the webcam/front camera and implementing an app with as less dependencies as possible while keeping it very pretty and user-friendly.
+This project is a boilerplate with the best practices for a frontend project in
+Feb 2022.
 
-React and more specifically the principle of hooks was nice to use. The Lord icon set was very useful to insert animated icons.
+It uses the technologies:
+
+- [React v17](https://reactjs.org/)
+- [React-Router v6](https://reactrouter.com/docs/en/v6)
+- [Redux Toolkit](https://redux.js.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Github actions](https://github.com/features/actions)
+- [Lordicons](https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js)
+- [Prettier](https://prettier.io/)
+- [Eslint](https://eslint.org/)
+
+And the tricks:
+
+- [Absolute paths](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
+- [Atomic design](https://atomicdesign.bradfrost.com/chapter-2/)
 
 ## Links
 
-- [React](https://reactjs.org/)
-- [Tailwind](https://cdn.tailwindcss.com)
-- [Lordicons](https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js)
 - [Tutorial to create motion detectors](https://codersblock.com/blog/motion-detection-with-javascript/)
 - [Exemple of code with motion detector](https://github.com/lonekorean/diff-cam-scratchpad/blob/master/diff-cam-engine.js)
 - [Switch component with tailwind](https://dev.to/themesberg/building-a-tailwind-css-toggleswitch-component-4pc3)

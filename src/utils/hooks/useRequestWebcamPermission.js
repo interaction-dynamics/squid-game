@@ -1,7 +1,5 @@
-import { React, useEffect } from 'react'
-
-import * as VIDEO_SIZE from '../config/videoSize'
-import useOnMount from './useOnMount'
+import * as VIDEO_SIZE from 'utils/config/videoSize'
+import useOnMount from 'utils/hooks/useOnMount'
 
 const constraints = {
   audio: false,

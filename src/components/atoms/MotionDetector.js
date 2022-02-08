@@ -1,23 +1,29 @@
-import React, { useEffect, useRef, useState } from 'react'
+import PropTypes from 'prop-types'
+import { useEffect, useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-import useInterval from '../hooks/useInterval'
-import useOnMount from '../hooks/useOnMount'
-import useRequestWebcamPermission from '../hooks/useRequestWebcamPermission'
+import useInterval from 'utils/hooks/useInterval'
+import useRequestWebcamPermission from 'utils/hooks/useRequestWebcamPermission'
 
-import { DIFFICULTY } from '../types/difficulty'
+import Difficulty from 'utils/types/difficulty'
 
-import * as VIDEO_SIZE from '../config/videoSize'
+import * as VIDEO_SIZE from 'utils/config/videoSize'
+import { getDifficulty } from 'store'
 
 const PIXEL_SCORE_THRESHOLD = 32
 const IMAGE_SCORE_THRESHOLD = 8000
 const IMAGE_SCORE_THRESHOLD_HARD = 1000
 
-export default ({ difficulty, onMove, onPermissionChanged, onMotionDetected, pause }) => {
+const MotionDetector = ({ onMove, onMotionDetected, pause }) => {
   const video = useRef()
   const canvas = useRef()
   const context = useRef()
+  const navigate = useNavigate()
 
-  const threshold = difficulty === DIFFICULTY.HARD ? IMAGE_SCORE_THRESHOLD_HARD : IMAGE_SCORE_THRESHOLD
+  const difficulty = useSelector(getDifficulty)
+
+  const threshold = difficulty === Difficulty.HARD ? IMAGE_SCORE_THRESHOLD_HARD : IMAGE_SCORE_THRESHOLD
 
   const drawWebcam = () => {
     context.current.drawImage(video.current, 0, 0, canvas.current.width, canvas.current.height)
@@ -33,29 +39,27 @@ export default ({ difficulty, onMove, onPermissionChanged, onMotionDetected, pau
     drawWebcam()
   }
 
+  useRequestWebcamPermission({
+    onAccepted: stream => {
+      startCapture(stream)
+    },
+    onRefused: () => {
+      navigate('/')
+    }
+  })
+
   const startCapture = stream => {
     video.current.srcObject = stream
 
     context.current = canvas.current.getContext('2d')
     drawReference()
-    onPermissionChanged(true)
   }
-
-  const onRefused = error => {
-    console.error(error)
-    onPermissionChanged(false)
-  }
-
-  useRequestWebcamPermission({
-    onAccepted: startCapture,
-    onRefused
-  })
 
   useEffect(() => {
-    if (pause) {
+    if (context.current && pause) {
       drawReference()
     }
-  }, [pause])
+  }, [pause, context.current])
 
   useInterval(() => {
     if (typeof context?.current?.drawImage === 'function') {
@@ -97,3 +101,19 @@ export default ({ difficulty, onMove, onPermissionChanged, onMotionDetected, pau
     </>
   )
 }
+
+MotionDetector.propTypes = {
+  onMove: PropTypes.func,
+  onPermissionChanged: PropTypes.func,
+  onMotionDetected: PropTypes.func,
+  pause: PropTypes.bool
+}
+
+MotionDetector.defaultProps = {
+  onMove: () => {},
+  onPermissionChanged: () => {},
+  onMotionDetected: () => {},
+  pause: false
+}
+
+export default MotionDetector
