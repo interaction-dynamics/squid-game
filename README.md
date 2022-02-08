@@ -3,12 +3,9 @@
 This project is a boilerplate with the best technologies and practices for a frontend project in
 Feb 2022.
 
-> As a
-
-A Web game based on green light/red light game from the famouse Squid Game TV
-show. You can play it at
-[interaction-dynamics.io/squid-game/](interaction-dynamics.io/squid-game/). This
-this web app creates a motion detector using the webcam/front camera.
+> As an example, this projec is A Web game based on green light/red light game from the famouse Squid Game TV
+> show. You can play it at [interaction-dynamics.io/squid-game/](interaction-dynamics.io/squid-game/). This
+> this web app creates a motion detector using the webcam/front camera.
 
 It uses the technologies:
 
@@ -21,6 +18,7 @@ It uses the technologies:
 - [Lordicons](https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js)
 - [Prettier](https://prettier.io/)
 - [Eslint](https://eslint.org/)
+- [Jest](https://jestjs.io)
 - [Commitlint](https://github.com/conventional-changelog/commitlint)
 - [Standard Version](https://github.com/conventional-changelog/standard-version)
 
@@ -28,6 +26,7 @@ And the best practices:
 
 - [Absolute paths](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
 - [Atomic design](https://atomicdesign.bradfrost.com/chapter-2/)
+- [AAA Pattern for unit tests](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80)
 - A good CONTRIBUTING.md (in addition of a good README.md)
 
 ## Getting started

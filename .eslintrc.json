@@ -12,6 +12,9 @@
     }
   },
   "env": {
-    "browser": true
-  }
+    "browser": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "plugins": ["jest"]
 }

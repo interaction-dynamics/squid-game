@@ -1,15 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+export const gameInitialState = {
+  difficulty: 'easy',
+  distance: 0,
+  isStarted: false
+}
+
 const gameSlice = createSlice({
   name: 'game',
-  initialState: {
-    difficulty: 'easy',
-    distance: 0,
-    isStarted: false
-  },
+  initialState: gameInitialState,
   reducers: {
     setDifficulty: (state, { payload }) => {
-      console.log('setDifficulty', payload)
       state.difficulty = payload
     },
     setDistance: (state, { payload }) => {
