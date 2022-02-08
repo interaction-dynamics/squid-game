@@ -1,15 +1,18 @@
 # Squid game
 
+This project is a boilerplate with the best technologies and practices for a frontend project in
+Feb 2022.
+
+> As a
+
 A Web game based on green light/red light game from the famouse Squid Game TV
 show. You can play it at
 [interaction-dynamics.io/squid-game/](interaction-dynamics.io/squid-game/). This
-this web app create a motion detector using the webcam/front camera.
-
-This project is a boilerplate with the best practices for a frontend project in
-Feb 2022.
+this web app creates a motion detector using the webcam/front camera.
 
 It uses the technologies:
 
+- [yarn](https://yarnpkg.com/)
 - [React v17](https://reactjs.org/)
 - [React-Router v6](https://reactrouter.com/docs/en/v6)
 - [Redux Toolkit](https://redux.js.org/)
@@ -18,11 +21,34 @@ It uses the technologies:
 - [Lordicons](https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js)
 - [Prettier](https://prettier.io/)
 - [Eslint](https://eslint.org/)
+- [Commitlint](https://github.com/conventional-changelog/commitlint)
+- [Standard Version](https://github.com/conventional-changelog/standard-version)
 
-And the tricks:
+And the best practices:
 
 - [Absolute paths](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
 - [Atomic design](https://atomicdesign.bradfrost.com/chapter-2/)
+- A good CONTRIBUTING.md (in addition of a good README.md)
+
+## Getting started
+
+```bash
+# installation
+yarn
+
+# start
+yarn start
+
+# build
+yarn build
+
+# code validation
+yarn lint
+yarn format
+yarn commitlint
+```
+
+### Code Validation
 
 ## Links
 
