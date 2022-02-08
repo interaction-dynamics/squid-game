@@ -31,7 +31,7 @@ jobs:
       - name: tests
         run: |
           yarn test
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -41,5 +41,5 @@ jobs:
       - name: Install
         run: |
           yarn
-      - name: Build 
+      - name: Build
           yarn build
