@@ -10,6 +10,9 @@ on:
   workflow_dispatch:
     branches:
       - main
+  push:
+    branches:
+      - main
 jobs:
   validate:
     runs-on: ubuntu-latest

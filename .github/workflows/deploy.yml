@@ -6,7 +6,6 @@ on:
 
 jobs:
   build-and-deploy:
-    needs: validate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
