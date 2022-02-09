@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name "Thibault Friedrich"
           git config user.email "<thibault.friedrich@gmail.com>"
-          npx standard-version -i RELEASE_BODY.md --skip.commit
+          npx standard-version
       - name: Publish tag
         id: publish_tag
         run: |
