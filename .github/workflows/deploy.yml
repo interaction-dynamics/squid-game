@@ -36,8 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
-          tag_name: ${{ steps.publish_tag.outputs.tag_name }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body_path: CHANGELOG.md
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
