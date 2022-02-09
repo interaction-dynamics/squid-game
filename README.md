@@ -1,4 +1,11 @@
+<div align="center">
+
 # Squid game
+
+![example workflow](https://github.com/interaction-dynamics/squid-game/actions/workflows/validate.yml/badge.svg)
+![version](https://img.shields.io/github/package-json/v/interaction-dynamics/squid-game)
+
+</div>
 
 This project is a boilerplate with the best technologies and practices for a frontend project in
 Feb 2022.
@@ -24,10 +31,10 @@ It uses the technologies:
 
 And the best practices:
 
-- [Absolute paths](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
 - [Atomic design](https://atomicdesign.bradfrost.com/chapter-2/)
 - [AAA Pattern for unit tests](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80)
-- A good CONTRIBUTING.md (in addition of a good README.md)
+- [Absolute paths](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
+- [CONTRIBUTING.md](./CONTRIBUTING.md) (in addition of a good README.md)
 
 ## Getting started
 
@@ -56,6 +63,7 @@ yarn commitlint
 - [Exemple of code with motion detector](https://github.com/lonekorean/diff-cam-scratchpad/blob/master/diff-cam-engine.js)
 - [Switch component with tailwind](https://dev.to/themesberg/building-a-tailwind-css-toggleswitch-component-4pc3)
 - [useInterval hook](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+- [Automatic release](https://github.com/marketplace/actions/automatic-releases)
 
 ## Contact us
 
