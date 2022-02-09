@@ -30,6 +30,8 @@ jobs:
         run: |
           git push --follow-tags
           echo ::set-output name=tag_name::$(git describe HEAD --abbrev=0)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         uses: actions/create-release@v1
         env:
