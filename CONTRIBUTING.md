@@ -73,6 +73,8 @@ These are the authorized types:
 - style
 - test
 
+> Using the right type is really important since it is used to increase the version number automatically.
+
 ## Test
 
 If you add a feature or fix a bug, you need to provide a test verifying your
@@ -81,15 +83,6 @@ improvement. You can launch tests using `yarn test`.
 ## Versioning
 
 `squid-game` use [standard-version](https://github.com/conventional-changelog/standard-version) to handle versioning
-automatically. So you just need to follow commit rules and once the maintainer will want to release a version, he will use commands:
-
-```bash
-git pull origin master
-npm run release
-git push --follow-tags origin master && npm publish
-```
-
-> Please do not use these commands if you don't have write capabilities on the repository. We want to
-> have versions synchronized with npm so these commands should be executed in the same time.
+automatically.
 
 **May the force be with you !!**

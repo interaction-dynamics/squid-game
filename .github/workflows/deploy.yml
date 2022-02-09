@@ -41,20 +41,6 @@ jobs:
           automatic_release_tag: ${{ steps.create_tag.outputs.tag_name }}
           files: |
             CHANGELOG.md
-      # - name: Release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # with:
-      #   tag_name: ${{ github.ref }}
-      #   release_name: Release ${{ github.ref }}
-      #   body_path: CHANGELOG.md
-      # - name: Release
-      #   uses: softprops/action-gh-release@v1
-      #   # if: startsWith(github.ref, 'refs/tags/')
-      #   with:
-      #     body_path: CHANGELOG.md
-      #     files: CHANGELOG.md
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:

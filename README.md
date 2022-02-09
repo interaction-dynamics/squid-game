@@ -63,7 +63,7 @@ yarn commitlint
 - [Exemple of code with motion detector](https://github.com/lonekorean/diff-cam-scratchpad/blob/master/diff-cam-engine.js)
 - [Switch component with tailwind](https://dev.to/themesberg/building-a-tailwind-css-toggleswitch-component-4pc3)
 - [useInterval hook](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
-- [Automatic release](https://github.com/marketplace/actions/automatic-releases)
+- [Automatic release](https://github.com/conventional-changelog/standard-version/issues/610)
 
 ## Contact us
 
