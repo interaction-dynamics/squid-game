@@ -20,10 +20,13 @@ jobs:
           yarn build
       - name: Configure committer
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.name "Thibault Friedrich"
+          git config user.email "<thibault.friedrich@gmail.com>"
       - name: Bump version
         uses: qzb/standard-version-action@v1.0.5
+      - name: Push tag
+        run: |
+          git push --follow-tags origin main
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
