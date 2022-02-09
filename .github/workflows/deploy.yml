@@ -13,6 +13,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
+          fetch-depth: 0 # gives standard-version access to all previous commits
           persist-credentials: false
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
@@ -24,8 +25,8 @@ jobs:
           git config user.email "<thibault.friedrich@gmail.com>"
       - name: Bump version
         uses: qzb/standard-version-action@v1.0.5
+      - uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
       - name: Publish tag
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         id: publish_tag
         run: |
           git push --follow-tags
