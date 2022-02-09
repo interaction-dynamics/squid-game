@@ -23,7 +23,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
       - name: Bump version
-        uses: qzb/standard-version@v1
+        uses: qzb/standard-version-action@v1.0.5
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
