@@ -43,10 +43,10 @@ jobs:
       #   uses: actions/create-release@v1
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body_path: CHANGELOG.md
+      # with:
+      #   tag_name: ${{ github.ref }}
+      #   release_name: Release ${{ github.ref }}
+      #   body_path: CHANGELOG.md
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
