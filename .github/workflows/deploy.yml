@@ -24,9 +24,19 @@ jobs:
           git config user.email "<thibault.friedrich@gmail.com>"
       - name: Bump version
         uses: qzb/standard-version-action@v1.0.5
-      - name: Push tag
+      - name: Publish tag
+        id: publish_tag
         run: |
-          git push --follow-tags origin main
+          git push --follow-tags
+          echo ::set-output name=tag_name::$(git describe HEAD --abbrev=0)
+      - name: Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
+          tag_name: ${{ steps.publish_tag.outputs.tag_name }}
+          body_path: CHANGELOG.md
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
