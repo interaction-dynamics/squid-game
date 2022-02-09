@@ -49,7 +49,7 @@ jobs:
       #   body_path: CHANGELOG.md
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        # if: startsWith(github.ref, 'refs/tags/')
         with:
           body_path: CHANGELOG.md
           files: CHANGELOG.md
