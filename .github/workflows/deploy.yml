@@ -19,13 +19,12 @@ jobs:
         run: |
           yarn
           yarn build
-      - name: Configure committer
+      # https://github.com/conventional-changelog/standard-version/issues/610
+      - name: Bump version
         run: |
           git config user.name "Thibault Friedrich"
           git config user.email "<thibault.friedrich@gmail.com>"
-      - name: Bump version
-        uses: qzb/standard-version-action@v1.0.5
-      - uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+          npx standard-version -i RELEASE_BODY.md --skip.commit
       - name: Publish tag
         id: publish_tag
         run: |
