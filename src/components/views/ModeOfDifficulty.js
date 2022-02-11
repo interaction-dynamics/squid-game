@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { BottomSheet } from 'react-spring-bottom-sheet'
+
+import 'react-spring-bottom-sheet/dist/style.css'
 
 import Page from 'components/templates/Page'
 import MotionIndicator from 'components/atoms/MotionIndicator'
@@ -7,25 +10,37 @@ import MotionDetector from 'components/atoms/MotionDetector'
 import Button from 'components/atoms/Button'
 
 import Difficulty from 'utils/types/difficulty'
+import useResponsive from 'utils/hooks/useResponsive'
 import { setDifficulty, getDifficulty } from 'store'
 
 const ModeOfDifficulty = () => {
   const dispatch = useDispatch()
   const [motionRatio, setMotionRatio] = useState(0)
 
-  const changeDifficulty = difficulty => dispatch(setDifficulty(difficulty))
-
+  const { md } = useResponsive()
   const difficulty = useSelector(getDifficulty)
 
   const isHard = difficulty === Difficulty.HARD
+  const [isHintOpen, openHint] = useState(false)
+
+  const changeDifficulty = difficulty => {
+    dispatch(setDifficulty(difficulty))
+
+    if (!md && difficulty === Difficulty.HARD) {
+      openHint(true)
+    }
+  }
+
+  const closeHint = () => {
+    openHint(false)
+  }
 
   return (
     <Page className={`bg-blue-500`}>
       <div className="flex flex-col items-center">
         <MotionDetector onMove={setMotionRatio} />
-        <div className="text-2xl pb-5 uppercase text-white">Mode of Difficulty</div>
         <MotionIndicator motionRatio={motionRatio} />
-        <div className="text-white pt-3">Indicator of movement</div>
+        <div className="text-white pt-3 text-sm">Indicator of movement</div>
         <div className="flex flex-row items-center py-7">
           <div
             className={`pr-2 cursor-pointer ${isHard ? 'text-gray-300' : 'text-white'}`}
@@ -60,6 +75,15 @@ const ModeOfDifficulty = () => {
         <Button to="/game" className="text-blue-500">
           Confirm
         </Button>
+        <BottomSheet open={isHintOpen} onDismiss={closeHint}>
+          <div className="p-5 text-justify text-blue-500">
+            If you are using a smartphone, we suggest you to place your smartphone on a table or use only easy mode. The vibrations while
+            holding the smartphone will be considered as you moving.
+            <Button className="mt-2 text-blue-500" onClick={closeHint}>
+              Got it!
+            </Button>
+          </div>
+        </BottomSheet>
       </div>
     </Page>
   )

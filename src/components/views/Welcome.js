@@ -20,12 +20,7 @@ export const Welcome = () => {
   const [permissionAccepted, setPermissionAccepted] = useState(false)
 
   useRequestWebcamPermission({
-    onAccepted: () => {
-      setPermissionAccepted(true)
-    },
-    onRefused: () => {
-      setPermissionAccepted(false)
-    }
+    onPermissionsChanged: setPermissionAccepted
   })
 
   return (
@@ -39,10 +34,6 @@ export const Welcome = () => {
             <br /> during the Green light and win.
           </p>
           <p className="p-0 m-0">Hold still during the Red light or die.</p>
-        </div>
-        <div className="block md:hidden my-5 py-5 px-5 bg-white text-blue-500 text-lg font-medium max-w-screen-sm	 rounded">
-          If you are using a smartphone, we suggest you to place your smartphone on a table or use only easy mode. The vibrations while
-          holding the smartphone will be considered as you moving.
         </div>
         {permissionAccepted ? (
           <Button to="/difficulty" className="text-blue-500">

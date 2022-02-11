@@ -6,8 +6,17 @@ const constraints = {
   video: { width: VIDEO_SIZE.WIDTH, height: VIDEO_SIZE.HEIGHT }
 }
 
-export default ({ onAccepted, onRefused }) => {
+export default ({ onAccepted, onRefused, onPermissionsChanged }) => {
   useOnMount(() => {
-    navigator.mediaDevices.getUserMedia(constraints).then(onAccepted).catch(onRefused)
+    navigator.mediaDevices
+      .getUserMedia(constraints)
+      .then(() => {
+        onPermissionsChanged(true)
+        onAccepted()
+      })
+      .catch(() => {
+        onPermissionsChanged(false)
+        onRefused()
+      })
   })
 }

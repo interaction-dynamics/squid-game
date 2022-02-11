@@ -26,7 +26,9 @@ const MotionDetector = ({ onMove, onMotionDetected, pause }) => {
   const threshold = difficulty === Difficulty.HARD ? IMAGE_SCORE_THRESHOLD_HARD : IMAGE_SCORE_THRESHOLD
 
   const drawWebcam = () => {
-    context.current.drawImage(video.current, 0, 0, canvas.current.width, canvas.current.height)
+    if (context.current && video.current && canvas.current) {
+      context.current.drawImage(video.current, 0, 0, canvas.current.width, canvas.current.height)
+    }
   }
 
   const drawReference = () => {
@@ -35,8 +37,10 @@ const MotionDetector = ({ onMove, onMotionDetected, pause }) => {
   }
 
   const drawDifference = () => {
-    context.current.globalCompositeOperation = 'difference'
-    drawWebcam()
+    if (context.current) {
+      context.current.globalCompositeOperation = 'difference'
+      drawWebcam()
+    }
   }
 
   useRequestWebcamPermission({
