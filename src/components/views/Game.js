@@ -12,6 +12,7 @@ import useEventListener from 'utils/hooks/useEventListener'
 import useInterval from 'utils/hooks/useInterval'
 
 import useOnMount from 'utils/hooks/useOnMount'
+import { t } from 'i18next'
 
 export const Status = {
   GREEN_LIGHT: 'GREEN_LIGHT',
@@ -102,8 +103,8 @@ const Game = () => {
     }
   }, 5000)
 
-  const label = gameStatus === Status.GREEN_LIGHT ? 'GREEN LIGHT' : 'RED LIGHT'
-  const hint = gameStatus === Status.GREEN_LIGHT ? 'Press [space] or click on the screen' : 'Hold still or DIE '
+  const label = gameStatus === Status.GREEN_LIGHT ? t('greenLight') : t('redLight')
+  const hint = gameStatus === Status.GREEN_LIGHT ? t('pressSpace') : t('holdStillOrDie')
 
   return (
     <Page className={gameStatus === Status.GREEN_LIGHT ? `bg-green-500` : `bg-red-500`}>

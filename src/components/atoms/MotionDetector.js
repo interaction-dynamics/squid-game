@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom'
 import useInterval from 'utils/hooks/useInterval'
 import useRequestWebcamPermission from 'utils/hooks/useRequestWebcamPermission'
 
-import Difficulty from 'utils/types/difficulty'
+import Difficulty from 'utils/difficulty'
 
-import * as VIDEO_SIZE from 'utils/config/videoSize'
+import * as VIDEO_SIZE from 'utils/videoSize'
 import { getDifficulty } from 'store'
 
 const PIXEL_SCORE_THRESHOLD = 32

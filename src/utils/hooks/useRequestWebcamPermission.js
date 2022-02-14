@@ -1,4 +1,4 @@
-import * as VIDEO_SIZE from 'utils/config/videoSize'
+import * as VIDEO_SIZE from 'utils/videoSize'
 import useOnMount from 'utils/hooks/useOnMount'
 
 const constraints = {
@@ -6,13 +6,13 @@ const constraints = {
   video: { width: VIDEO_SIZE.WIDTH, height: VIDEO_SIZE.HEIGHT }
 }
 
-export default ({ onAccepted, onRefused, onPermissionsChanged }) => {
+export default ({ onAccepted = () => {}, onRefused = () => {}, onPermissionsChanged = () => {} }) => {
   useOnMount(() => {
     navigator.mediaDevices
       .getUserMedia(constraints)
-      .then(() => {
+      .then(stream => {
         onPermissionsChanged(true)
-        onAccepted()
+        onAccepted(stream)
       })
       .catch(() => {
         onPermissionsChanged(false)

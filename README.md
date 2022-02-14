@@ -64,6 +64,8 @@ yarn commitlint
 - [Switch component with tailwind](https://dev.to/themesberg/building-a-tailwind-css-toggleswitch-component-4pc3)
 - [useInterval hook](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
 - [Automatic release](https://github.com/conventional-changelog/standard-version/issues/610)
+- [Localization](https://react.i18next.com/)
+- [Dropdown with tailwind](https://tailwindui.com/components/application-ui/elements/dropdowns)
 
 ## Contact us
 
