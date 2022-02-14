@@ -1,8 +1,8 @@
 const config = {
   rootDir: './',
-  testPathIgnorePatterns: ['.*e2e.test.js'],
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/config/setupTests.js']
+  preset: 'jest-puppeteer',
+  testRegex: './*\\e2e\\.test\\.js$',
+  setupFilesAfterEnv: ['<rootDir>/config/setupTests.e2e.js']
 
   // collectCoverage: true,
   // collectCoverageFrom: ['src/**/*'],

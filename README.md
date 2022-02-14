@@ -26,6 +26,8 @@ It uses the technologies:
 - [Prettier](https://prettier.io/)
 - [Eslint](https://eslint.org/)
 - [Jest](https://jestjs.io)
+- [Testing Library](https://testing-library.com/)
+- [Puppeteer](https://github.com/puppeteer/puppeteer)
 - [Commitlint](https://github.com/conventional-changelog/commitlint)
 - [Standard Version](https://github.com/conventional-changelog/standard-version)
 
@@ -66,6 +68,8 @@ yarn commitlint
 - [Automatic release](https://github.com/conventional-changelog/standard-version/issues/610)
 - [Localization](https://react.i18next.com/)
 - [Dropdown with tailwind](https://tailwindui.com/components/application-ui/elements/dropdowns)
+- [Puppeteer Tutorial](https://blog.logrocket.com/react-end-to-end-testing-jest-puppeteer/)
+- [Puppeteer with github actions](https://levelup.gitconnected.com/running-puppeteer-with-jest-on-github-actions-for-automated-testing-with-coverage-6cd15bc843b0)
 
 ## Contact us
 
