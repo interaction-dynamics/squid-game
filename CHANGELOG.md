@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/interaction-dynamics/squid-game/compare/v1.1.6...v1.2.0) (2022-02-15)
+
+
+### Features
+
+* add hint when user chooses hard mode on smartphone ([adb42fa](https://github.com/interaction-dynamics/squid-game/commit/adb42fae10fc7aa2bb56b6770d1e19f594fe4349))
+* **translation:** add french version ([35ffab4](https://github.com/interaction-dynamics/squid-game/commit/35ffab45d0cdc25d144204c75c8c122b94d109f7))
+
 ### [1.1.6](https://github.com/interaction-dynamics/squid-game/compare/v1.1.5...v1.1.6) (2022-02-09)
 
 ### [1.1.5](https://github.com/interaction-dynamics/squid-game/compare/v1.1.4...v1.1.5) (2022-02-09)
