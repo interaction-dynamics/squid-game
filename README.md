@@ -1,6 +1,8 @@
 <div align="center">
 
-# Squid game
+<h1>Squid game</h1>
+
+![Mockups](https://user-images.githubusercontent.com/4005226/154565687-42e637ae-9df0-4c5f-8104-892d48b95786.png)
 
 ![example workflow](https://github.com/interaction-dynamics/squid-game/actions/workflows/validate.yml/badge.svg)
 ![version](https://img.shields.io/github/package-json/v/interaction-dynamics/squid-game)
