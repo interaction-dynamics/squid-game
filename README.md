@@ -12,7 +12,7 @@
 This project is a boilerplate with the best technologies and practices for a frontend project in
 Feb 2022.
 
-> As an example, this projec is A Web game based on green light/red light game from the famouse Squid Game TV
+> As an example, this project is A Web game based on green light/red light game from the famouse Squid Game TV
 > show. You can play it at [interaction-dynamics.io/squid-game/](interaction-dynamics.io/squid-game/). This
 > this web app creates a motion detector using the webcam/front camera.
 
