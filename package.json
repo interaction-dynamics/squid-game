@@ -1,6 +1,6 @@
 {
   "name": "squid-game",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A Web Game inspired by Squid Game built with React.",
   "keywords": [],
   "main": "src/index.js",
